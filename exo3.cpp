@@ -1,29 +1,26 @@
 #include <iostream>
 using namespace std;
 
-void calculquorum() {
-    int I, V;
-    float Q , q ;
-    cout << "Entrez le nombre d'inscrits : ";
-    cin >> I;
-    cout << "Entrez le nombre de votants : ";
-    cin >> V;
-    cout << "Le quorum est de " << Q  << endl;
-    cin >> Q;
-    float P=(100.0*V)/I;
-    float M=(V/2.0)+1;
-    q = (100.0*V)/I;
-
-    if (Q > q) {
-        cout << "Le quorum n'est pas atteint." << endl;
-    } else {
-        cout << "Le quorum est atteint." << endl;
-        cout << "Le pourcentage de votes est de " << P << "%." << endl;
-        cout << "Le nombre de votes nécessaires pour gagner est de " << M << "." << endl;   
-    }
-}
-
 int main() {
-    calculquorum();
+    int I, V, Q;
+    float P, M;
+
+    cout << "Nombre d'inscrits (I) : ";
+    cin >> I;
+    cout << "Quorum (Q) : ";
+    cin >> Q;
+    cout << "Nombre de votants (V) : ";
+    cin >> V;
+
+    if (V >= Q) {
+        P = (100.0 * V) / I;
+        M = V / 2.0 + 1;
+        cout << "Quorum atteint !" << endl;
+        cout << "Pourcentage de votants P = " << P << "%" << endl;
+        cout << "Nombre de voix pour la majorite M = " << M << endl;
+    } else {
+        cout << "AVERTISSEMENT : Le quorum n'est pas atteint. Vote invalide." << endl;
+    }
+
     return 0;
 }
