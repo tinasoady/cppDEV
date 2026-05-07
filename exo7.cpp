@@ -9,9 +9,9 @@ int main() {
                    -60, 24, 12, 89, 19};
 
     for (int i = 0; i < 20; i++) {
-        cout << setw(6) << tab[i];
+        cout << setw(6) << tab[i]; // Affiche chaque élément du tableau avec une largeur de champ de 6
         if ((i + 1) % 5 == 0) {
-            cout << endl;
+            cout << endl; // Saut de ligne après chaque 5 éléments
         }
     }
 

@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cmath>
-#include <conio.h>
+
 using namespace std;
+
 
 // Fonction carre
 int carre(int x) {
@@ -79,7 +80,6 @@ int main() {
             cout << "Choix invalide." << endl;
     }
 
-    cout << "\nPour sortir, frapper une touche : ";
-    getch();
+  
     return 0;
 }
